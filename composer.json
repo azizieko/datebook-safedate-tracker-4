@@ -1,0 +1,24 @@
+{
+  "name": "safedate/datebook-safedate-tracker",
+  "description": "DateBook SafeDate Tracker WordPress plugin with automated PHPUnit tests.",
+  "type": "wordpress-plugin",
+  "license": "proprietary",
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6",
+    "yoast/phpunit-polyfills": "^2.0",
+    "wp-coding-standards/wpcs": "^3.0"
+  },
+  "scripts": {
+    "test": "phpunit -c phpunit.xml.dist",
+    "test:filter": "phpunit -c phpunit.xml.dist --filter",
+    "lint:php": "find . -path './vendor' -prune -o -name '*.php' -print -exec php -l {} \\;"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
